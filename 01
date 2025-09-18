@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Impero del Nord Italia — Sito ufficiale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#faf6f3;
+      --accent:#7b2b2b; /* porpora imperiale */
+      --gold:#d4a21a;
+      --muted:#6b6b6b;
+      --container:1100px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:#111}
+    header.site-header{background:linear-gradient(90deg,var(--accent),#5e1d1d); color:white;padding:1.25rem 1rem}
+    .wrap{max-width:var(--container);margin:0 auto;padding:0 1rem}
+    .brand{display:flex;align-items:center;gap:1rem}
+    .brand .crest{width:72px;height:72px;border-radius:6px;background:linear-gradient(180deg,var(--gold),#b78f16);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);box-shadow:0 6px 18px rgba(0,0,0,.18)}
+    .brand h1{font-family:Spectral, serif;margin:0;font-size:1.25rem;letter-spacing:.02em}
+    nav.main-nav{margin-top:.6rem}
+    nav.main-nav a{color:rgba(255,255,255,.92);text-decoration:none;margin-right:1rem;font-weight:600}
+
+```
+.hero{background:white;margin:1.5rem auto;padding:2rem;border-radius:10px;box-shadow:0 8px 30px rgba(40,40,40,.06);display:flex;gap:2rem;align-items:center}
+.hero .left{flex:1}
+.hero h2{font-family:Spectral,serif;margin:.2rem 0;font-size:2rem;color:var(--accent)}
+.hero p.lead{color:var(--muted);margin:0;font-size:1rem}
+.cta{margin-top:1rem}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:6px;background:var(--accent);color:white;text-decoration:none;font-weight:600}
+
+.columns{display:grid;grid-template-columns:2fr 1fr;gap:1.25rem;margin-top:1rem}
+section.card{background:white;padding:1rem;border-radius:8px}
+h3{font-family:Spectral,serif;color:var(--accent);margin-top:0}
+.meta{color:var(--muted);font-size:.95rem}
+
+aside.side{position:relative}
+.side .panel{background:linear-gradient(180deg,#fff,#fbfbfb);padding:1rem;border-radius:8px;box-shadow:0 6px 18px rgba(20,20,20,.04)}
+.flag{width:100%;height:auto;border-radius:6px;display:block}
+ul.simple{padding-left:1rem}
+
+footer{margin-top:2rem;padding:1.5rem 0;text-align:center;color:var(--muted);font-size:.95rem}
+
+/* responsive */
+@media (max-width:860px){
+  .columns{grid-template-columns:1fr}
+  .brand h1{font-size:1rem}
+  .hero{flex-direction:column}
+}
+```
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <div class="crest" aria-hidden>IM</div>
+        <div>
+          <h1>Impero del Nord Italia</h1>
+          <div class="meta">Sito ufficiale • Stato e Wiki Imperiale</div>
+        </div>
+      </div>
+      <nav class="main-nav" aria-label="Menu principale">
+        <a href="#home">Home</a>
+        <a href="#storia">Storia</a>
+        <a href="#governo">Governo</a>
+        <a href="#simbologia">Simbologia</a>
+        <a href="#popoli">Popoli</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="home">
+    <div class="hero" role="region" aria-labelledby="hero-title">
+      <div class="left">
+        <h2 id="hero-title">Impero del Nord Italia — Progetto istituzionale e culturale</h2>
+        <p class="lead">L'Impero del Nord Italia è una federazione di nazioni e popoli del Nord Adriatico e dell'area alpina. Qui trovi documenti ufficiali, simboli, mappe e la Wiki che descrive la nostra identità laica, civile e multietnica.</p>
+        <div class="cta">
+          <a class="btn" href="#simbologia">Scopri i simboli</a>
+          <a class="btn" href="#costituzione" style="background:var(--gold);color:var(--accent);margin-left:.6rem">Leggi la Costituzione</a>
+        </div>
+      </div>
+      <div style="width:300px;flex:0 0 300px;text-align:center">
+        <!-- placeholder bandiera: carica in /img/flag-state.png e sostituisci src -->
+        <img class="flag" src="img/bandiera-stato.png" alt="Bandiera di Stato dell'Impero del Nord Italia">
+      </div>
+    </div>
+
+```
+<div class="columns">
+  <section class="card">
+    <h3 id="storia">Storia e Fondazione</h3>
+    <p>Il progetto imperiale nasce dall'esigenza di tutelare le identità storiche e culturali delle genti del Nord, promuovendo autonomia locale, laicità e sviluppo economico. Qui raccogliamo documenti storici, cronache, dichiarazioni fondative e testi costitutivi.</p>
+    <p class="meta">Ultima modifica: 2025</p>
+
+    <hr>
+
+    <h3 id="governo">Governo e Istituzioni</h3>
+    <p>La forma di governo è imperiale con un organo federale di nazioni costituenti. I ruoli principali (Imperatore, Consiglio dei Settori, Ministri-Specialisti) sono definiti nello Statuto e nella Costituzione Imperiale.</p>
+
+    <h3 id="simbologia">Simbologia ufficiale</h3>
+    <p>Bandiera di Stato, bandiera civile, stemmi nazionali e bandiere delle colonie sono descritti in dettaglio nella sezione Simbologia. Tutti i simboli sono laici e privi di riferimenti religiosi.</p>
+
+    <h3 id="popoli">Popoli e Nazioni</h3>
+    <p>Le nazioni costituenti riconosciute comprendono: Veneti, Trentini, Istrioti, Lombardi, Piemontesi, Liguri, Emiliani, Romagnoli, Gallo-Piceni, Friulani, Ladini e Romanci. Ogni nazione dispone di autonomia culturale e linguistica definita dalla Costituzione.</p>
+
+    <h3 id="costituzione">Costituzione (sintesi)</h3>
+    <p>La Costituzione garantisce la laicità dello Stato, i diritti fondamentali, l'autonomia linguistica e le procedure per la rappresentanza delle nazioni costituenti.</p>
+
+  </section>
+
+  <aside class="side">
+    <div class="panel">
+      <h4>Ultime Notizie</h4>
+      <ul class="simple">
+        <li><strong>Data:</strong> Pubblicata la bozza della Costituzione</li>
+        <li><strong>Data:</strong> Bandiera ufficiale registrata (bozza)</li>
+        <li><strong>Data:</strong> Apertura della Wiki Imperiale</li>
+      </ul>
+    </div>
+
+    <div style="height:1rem"></div>
+
+    <div class="panel">
+      <h4>Risorse rapide</h4>
+      <ul class="simple">
+        <li><a href="#simbologia">Bandiera e stemmi</a></li>
+        <li><a href="#popoli">Elenco nazioni</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+    </div>
+
+  </aside>
+</div>
+
+<footer id="contatti">
+  <p>Contatti: redazione@impero-nord.org (esempio)</p>
+  <p>Pagina creata per il progetto Impero del Nord Italia — uso simbolico e culturale.</p>
+</footer>
+```
+
+  </main>
+
+</body>
+</html>
