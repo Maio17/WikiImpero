@@ -2,144 +2,151 @@
 
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wiki dell'Impero del Nord Italia</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Impero del Nord Italia — Sito ufficiale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: sans-serif;
-      background-color: #f8f8f8;
-      color: #333;
-      margin: 0;
-      padding: 0;
+    :root{
+      --bg:#faf6f3;
+      --accent:#7b2b2b; /* porpora imperiale */
+      --gold:#d4a21a;
+      --muted:#6b6b6b;
+      --container:1100px;
     }
-    header {
-      background-color: #0e1a2b;
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
-    }
-    nav {
-      background-color: #d6d6d6;
-      padding: 0.5rem 2rem;
-    }
-    nav a {
-      margin-right: 1rem;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    main {
-      padding: 2rem;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h1, h2 {
-      color: #0e1a2b;
-    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:#111}
+    header.site-header{background:linear-gradient(90deg,var(--accent),#5e1d1d); color:white;padding:1.25rem 1rem}
+    .wrap{max-width:var(--container);margin:0 auto;padding:0 1rem}
+    .brand{display:flex;align-items:center;gap:1rem}
+    .brand .crest{width:72px;height:72px;border-radius:6px;background:linear-gradient(180deg,var(--gold),#b78f16);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);box-shadow:0 6px 18px rgba(0,0,0,.18)}
+    .brand h1{font-family:Spectral, serif;margin:0;font-size:1.25rem;letter-spacing:.02em}
+    nav.main-nav{margin-top:.6rem}
+    nav.main-nav a{color:rgba(255,255,255,.92);text-decoration:none;margin-right:1rem;font-weight:600}
+
+```
+.hero{background:white;margin:1.5rem auto;padding:2rem;border-radius:10px;box-shadow:0 8px 30px rgba(40,40,40,.06);display:flex;gap:2rem;align-items:center}
+.hero .left{flex:1}
+.hero h2{font-family:Spectral,serif;margin:.2rem 0;font-size:2rem;color:var(--accent)}
+.hero p.lead{color:var(--muted);margin:0;font-size:1rem}
+.cta{margin-top:1rem}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:6px;background:var(--accent);color:white;text-decoration:none;font-weight:600}
+
+.columns{display:grid;grid-template-columns:2fr 1fr;gap:1.25rem;margin-top:1rem}
+section.card{background:white;padding:1rem;border-radius:8px}
+h3{font-family:Spectral,serif;color:var(--accent);margin-top:0}
+.meta{color:var(--muted);font-size:.95rem}
+
+aside.side{position:relative}
+.side .panel{background:linear-gradient(180deg,#fff,#fbfbfb);padding:1rem;border-radius:8px;box-shadow:0 6px 18px rgba(20,20,20,.04)}
+.flag{width:100%;height:auto;border-radius:6px;display:block}
+ul.simple{padding-left:1rem}
+
+footer{margin-top:2rem;padding:1.5rem 0;text-align:center;color:var(--muted);font-size:.95rem}
+
+/* responsive */
+@media (max-width:860px){
+  .columns{grid-template-columns:1fr}
+  .brand h1{font-size:1rem}
+  .hero{flex-direction:column}
+}
+```
+
   </style>
 </head>
 <body>
-  <header>
-    <h1>Wiki Imperiale dell'Impero del Nord Italia</h1>
-    <p>Documentazione storica, simbolica e amministrativa dello Stato</p>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <div class="crest" aria-hidden>IM</div>
+        <div>
+          <h1>Impero del Nord Italia</h1>
+          <div class="meta">Sito ufficiale • Stato e Wiki Imperiale</div>
+        </div>
+      </div>
+      <nav class="main-nav" aria-label="Menu principale">
+        <a href="#home">Home</a>
+        <a href="#storia">Storia</a>
+        <a href="#governo">Governo</a>
+        <a href="#simbologia">Simbologia</a>
+        <a href="#popoli">Popoli</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="#introduzione">Introduzione</a>
-    <a href="#storia">Storia</a>
-    <a href="#governo">Governo</a>
-    <a href="#bandiera">Bandiera e simboli</a>
-    <a href="#territorio">Popoli e territorio</a>
-    <a href="#costituzione">Costituzione</a>
-  </nav>
+  <main class="wrap" id="home">
+    <div class="hero" role="region" aria-labelledby="hero-title">
+      <div class="left">
+        <h2 id="hero-title">Impero del Nord Italia — Progetto istituzionale e culturale</h2>
+        <p class="lead">L'Impero del Nord Italia è una federazione di nazioni e popoli del Nord Adriatico e dell'area alpina. Qui trovi documenti ufficiali, simboli, mappe e la Wiki che descrive la nostra identità laica, civile e multietnica.</p>
+        <div class="cta">
+          <a class="btn" href="#simbologia">Scopri i simboli</a>
+          <a class="btn" href="#costituzione" style="background:var(--gold);color:var(--accent);margin-left:.6rem">Leggi la Costituzione</a>
+        </div>
+      </div>
+      <div style="width:300px;flex:0 0 300px;text-align:center">
+        <!-- placeholder bandiera: carica in /img/flag-state.png e sostituisci src -->
+        <img class="flag" src="img/bandiera-stato.png" alt="Bandiera di Stato dell'Impero del Nord Italia">
+      </div>
+    </div>
 
-  <main>
-    <section id="introduzione">
-      <h2>Introduzione</h2>
-      <p>L'Impero del Nord Italia è uno Stato indipendente autoproclamato che unisce le genti del Nord Italia in un progetto politico e culturale unitario, laico e multietnico.</p>
-    </section>
+```
+<div class="columns">
+  <section class="card">
+    <h3 id="storia">Storia e Fondazione</h3>
+    <p>Il progetto imperiale nasce dall'esigenza di tutelare le identità storiche e culturali delle genti del Nord, promuovendo autonomia locale, laicità e sviluppo economico. Qui raccogliamo documenti storici, cronache, dichiarazioni fondative e testi costitutivi.</p>
+    <p class="meta">Ultima modifica: 2025</p>
 
-    <section id="storia">
-      <h2>Storia</h2>
-      <p>Fondato da due cittadini visionari, l'Impero nasce come risposta al desiderio di autodeterminazione e valorizzazione delle culture settentrionali italiane.</p>
-    </section>
+    <hr>
 
-    <section id="governo">
-      <h2>Governo</h2>
-      <p>Il governo è retto da un Imperatore, affiancato da figure istituzionali nominate secondo lo statuto imperiale. Il potere è distribuito secondo un modello federale.</p>
-    </section>
+    <h3 id="governo">Governo e Istituzioni</h3>
+    <p>La forma di governo è imperiale con un organo federale di nazioni costituenti. I ruoli principali (Imperatore, Consiglio dei Settori, Ministri-Specialisti) sono definiti nello Statuto e nella Costituzione Imperiale.</p>
 
-    <section id="bandiera">
-      <h2>Bandiera e Simboli</h2>
-      <h3>Bandiera dello Stato dell’Impero del Nord Italia</h3>
-      <p><strong>Blasonatura vessillologica ufficiale:</strong><br>
-      Di verde (RGB 0,140,69), attraversata da due bande inclinate, la prima in banda di bianco (RGB 255,255,255), con inclinazione di 31,25° dall’orizzontale, dalla cantoniera sinistra alla punta destra; la seconda in sbarra di rosso porpora scuro (RGB 172,0,0), inclinata di 328,75° (ovvero -31,25°), dalla cantoniera destra alla punta sinistra, entrambe partenti dai rispettivi angoli opposti del campo.<br>
-      Nel cuore della bandiera campeggia uno scudo veneziano di rosso porpora scuro (RGB 172,0,0), contenente un leone alato d’oro affrontato, seduto, con ali spiegate, ispirato allo stemma storico della Repubblica di Venezia (XVI–XVIII secolo), modificato per rimuovere simboli religiosi, privo di libro o aureola. Lo scudo è bordato e cimato da cartiglio barocco d’oro e sormontato dalla Corona Ferrea d’Italia, gemmata e smaltata secondo foggia storica.<br>
-      <em>Proporzioni: 61,29:100 (equivalente a circa 19:31).</em></p>
+    <h3 id="simbologia">Simbologia ufficiale</h3>
+    <p>Bandiera di Stato, bandiera civile, stemmi nazionali e bandiere delle colonie sono descritti in dettaglio nella sezione Simbologia. Tutti i simboli sono laici e privi di riferimenti religiosi.</p>
 
-      <h3>Bandiera Civile dell’Impero del Nord Italia</h3>
-      <p><strong>Blasonatura vessillologica ufficiale:</strong><br>
-      Di verde (RGB 0,140,69), attraversata da due bande inclinate, la prima in banda di bianco (RGB 255,255,255), con inclinazione di 31,25° dall’orizzontale, dalla cantoniera sinistra alla punta destra; la seconda in sbarra di rosso porpora scuro (RGB 172,0,0), inclinata di 328,75° (ovvero -31,25°), dalla cantoniera destra alla punta sinistra, entrambe partenti dai rispettivi angoli opposti del campo.<br>
-      Priva di emblemi, stemmi, insegne o corone.<br>
-      <em>Proporzioni: 61,29:100 (equivalente a circa 19:31).</em></p>
-    </section>
+    <h3 id="popoli">Popoli e Nazioni</h3>
+    <p>Le nazioni costituenti riconosciute comprendono: Veneti, Trentini, Istrioti, Lombardi, Piemontesi, Liguri, Emiliani, Romagnoli, Gallo-Piceni, Friulani, Ladini e Romanci. Ogni nazione dispone di autonomia culturale e linguistica definita dalla Costituzione.</p>
 
-    <section id="territorio">
-      <h2>Popoli e Territorio</h2>
-      <p>L'Impero comprende territori abitati da Veneti, Lombardi, Friulani, Trentini, Emiliani e altri popoli storici del nord. Il territorio si estende su pianure, colline, Alpi e coste adriatiche.</p>
-    </section>
+    <h3 id="costituzione">Costituzione (sintesi)</h3>
+    <p>La Costituzione garantisce la laicità dello Stato, i diritti fondamentali, l'autonomia linguistica e le procedure per la rappresentanza delle nazioni costituenti.</p>
 
-    <section id="costituzione">
-      <h2>Costituzione</h2>
-      <p>La Costituzione dell'Impero è in fase di redazione. Essa garantisce la laicità dello Stato, i diritti fondamentali dei cittadini, e l'autonomia culturale e linguistica delle comunità locali.</p>
-    </section>
+  </section>
+
+  <aside class="side">
+    <div class="panel">
+      <h4>Ultime Notizie</h4>
+      <ul class="simple">
+        <li><strong>Data:</strong> Pubblicata la bozza della Costituzione</li>
+        <li><strong>Data:</strong> Bandiera ufficiale registrata (bozza)</li>
+        <li><strong>Data:</strong> Apertura della Wiki Imperiale</li>
+      </ul>
+    </div>
+
+    <div style="height:1rem"></div>
+
+    <div class="panel">
+      <h4>Risorse rapide</h4>
+      <ul class="simple">
+        <li><a href="#simbologia">Bandiera e stemmi</a></li>
+        <li><a href="#popoli">Elenco nazioni</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+    </div>
+
+  </aside>
+</div>
+
+<footer id="contatti">
+  <p>Contatti: redazione@impero-nord.org (esempio)</p>
+  <p>Pagina creata per il progetto Impero del Nord Italia — uso simbolico e culturale.</p>
+</footer>
+```
+
   </main>
+
 </body>
-<h2>Simbologia dell'Impero del Nord Italia</h2>
-
-<h3>Bandiera di Stato</h3>
-<img src="img/bandiera-stato.png" alt="Bandiera di Stato dell'Impero del Nord Italia" width="500">
-<p>
-<strong>Blasonatura ufficiale:</strong><br>
-Di verde (RGB 0,140,69), attraversata da due bande inclinate, la prima in banda di bianco (RGB 255,255,255), inclinata di 31,25° dall’orizzontale; la seconda in sbarra di rosso porpora scuro (RGB 172,0,0), inclinata di -31,25°. Al centro, uno scudo veneziano rosso con leone alato d’oro, senza simboli religiosi, bordato da cartiglio barocco d’oro e sormontato dalla Corona Ferrea d’Italia. <br>
-<strong>Proporzioni:</strong> 61,29:100 (≈ 19:31).
-</p>
-
-<h3>Bandiera Civile</h3>
-<img src="img/bandiera-civile.png" alt="Bandiera Civile dell'Impero del Nord Italia" width="500">
-<p>
-<strong>Blasonatura ufficiale:</strong><br>
-Stessa base della bandiera di Stato, ma priva di scudo, stemmi e corone. <br>
-<strong>Proporzioni:</strong> 61,29:100 (≈ 19:31).
-</p>
-
-<h3>Stemma dell’Impero</h3>
-<img src="img/stemma-impero.png" alt="Stemma dell'Impero del Nord Italia" width="300">
-<p>
-<strong>Descrizione:</strong><br>
-Scudo veneziano di rosso porpora scuro con un leone alato d’oro affrontato, seduto e con ali spiegate, ispirato alla Repubblica di Venezia (XVI–XVIII secolo). Privo di libro o aureola, lo scudo è bordato e cimato da cartiglio barocco dorato, sormontato dalla Corona Ferrea d’Italia.
-</p>
-
-<hr>
-
-<h2>Popoli dell’Impero</h2>
-<p>
-L’Impero del Nord Italia è una realtà multietnica composta da numerosi popoli storici, ciascuno organizzato in una propria nazione, unitaria sotto la guida imperiale.
-</p>
-
-<ul>
-  <li><strong>Veneti</strong> – Nazione Veneta</li>
-  <li><strong>Trentini</strong> – Nazione Trentina</li>
-  <li><strong>Istrioti</strong> – Nazione Istriota</li>
-  <li><strong>Lombardi</strong> – Nazione Lombarda</li>
-  <li><strong>Piemontesi</strong> – Nazione Piemontese</li>
-  <li><strong>Liguri</strong> – Nazione Ligure</li>
-  <li><strong>Emiliani</strong> – Nazione Emiliana</li>
-  <li><strong>Romagnoli</strong> – Nazione Romagnola</li>
-  <li><strong>Gallo-Piceni (Marchigiani Settentrionali)</strong> – Nazione Picena</li>
-  <li><strong>Friulani</strong> – Nazione Friulana</li>
-  <li><strong>Ladini</strong> – Nazione Ladina</li>
-  <li><strong>Romanci</strong> – Nazione Romancia</li>
-</ul>
+</html>
